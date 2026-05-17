@@ -52,6 +52,13 @@
         }
       ]
     ],
-    "scheme": "syriavpnpro"
+    "scheme": "syriavpnpro",
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "c6c518d2-f14f-4957-b353-639f45b776d0"
+      }
+    },
+    "owner": "jeotmath"
   }
 }
