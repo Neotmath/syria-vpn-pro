@@ -50,28 +50,24 @@ jobs:
         name: app-debug
         path: android/app/build/outputs/apk/debug/app-debug.apk
         
-    - name: Create Release
-      uses: actions/create-release@v1
+    - name: Create Release and Upload APK
+      uses: softprops/action-gh-release@v1
       if: success()
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tag_name: v${{ github.run_number }}
-        release_name: Syria VPN Pro v${{ github.run_number }}
+        name: Syria VPN Pro v${{ github.run_number }}
         body: |
-          Built APK for Syria VPN Pro
+          🎉 Syria VPN Pro APK Build #${{ github.run_number }}
           
-          Download: app-debug.apk
+          **Features:**
+          - 5 Premium US Residential Servers
+          - MTU 1280 optimized for Syrian networks (Syriatel & MTN)
+          - WireGuard Protocol with AES-256-GCM
+          - Modern Dark UI
+          
+          **Download:** app-debug.apk
         draft: false
         prerelease: false
-        
-    - name: Upload Release Asset
-      uses: actions/upload-release-asset@v1
-      if: success()
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: android/app/build/outputs/apk/debug/app-debug.apk
-        asset_name: app-debug.apk
-        asset_content_type: application/vnd.android.package-archive
+        files: android/app/build/outputs/apk/debug/app-debug.apk
