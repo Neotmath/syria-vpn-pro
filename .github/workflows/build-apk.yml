@@ -45,6 +45,10 @@ jobs:
       - name: Expo Prebuild
         run: npx expo prebuild --clean --platform android
 
+      - name: Fix build.gradle compatibility
+        run: |
+          sed -i '/enableBundleCompression/d' android/app/build.gradle
+
       - name: Write local.properties
         run: echo "sdk.dir=$ANDROID_HOME" > android/local.properties
 
