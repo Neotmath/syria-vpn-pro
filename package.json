@@ -2,7 +2,7 @@
   "name": "syria-vpn-pro",
   "version": "1.0.0",
   "description": "Lightweight VPN app with premium US residential servers optimized for Syrian networks (Syriatel & MTN)",
-  "main": "index.tsx",
+  "main": "index.js",
   "private": true,
   "scripts": {
     "start": "expo start",
