@@ -32,19 +32,24 @@
       "minSdkVersion": 24,
       "targetSdkVersion": 34
     },
-    "web": { "favicon": "./assets/favicon.png" },
     "plugins": [
       [
         "expo-build-properties",
         {
           "android": {
+            "buildArchs": ["arm64-v8a"],
             "minSdkVersion": 24,
-            "targetSdkVersion": 34,
-            "buildToolsVersion": "34.0.0"
+            "targetSdkVersion": 34
           }
         }
       ]
     ],
-    "scheme": "syriavpnpro"
+    "scheme": "syriavpnpro",
+    "extra": {
+      "eas": {
+        "projectId": "c6c518d2-f14f-4957-b353-639f45b776d0"
+      }
+    },
+    "owner": "jeotmath"
   }
 }
