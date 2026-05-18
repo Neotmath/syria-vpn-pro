@@ -11,9 +11,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#0A0E1A"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.syriavpn.pro"
@@ -34,31 +32,19 @@
       "minSdkVersion": 24,
       "targetSdkVersion": 34
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
+    "web": { "favicon": "./assets/favicon.png" },
     "plugins": [
-      "expo-router",
       [
         "expo-build-properties",
         {
           "android": {
-            "buildArchs": [
-              "arm64-v8a"
-            ],
             "minSdkVersion": 24,
-            "targetSdkVersion": 34
+            "targetSdkVersion": 34,
+            "buildToolsVersion": "34.0.0"
           }
         }
       ]
     ],
-    "scheme": "syriavpnpro",
-    "extra": {
-      "router": {},
-      "eas": {
-        "projectId": "c6c518d2-f14f-4957-b353-639f45b776d0"
-      }
-    },
-    "owner": "jeotmath"
+    "scheme": "syriavpnpro"
   }
 }
